@@ -7,13 +7,16 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Grails"/></title>
+		<title><g:layoutTitle default="Quizoo"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <!-- Bootstrap -->
+        <link href="${resource(dir: 'css', file: 'quizoo.css')}" rel="stylesheet">
         <r:require modules="bootstrap"/>
 
         <g:layoutHead/>
@@ -21,8 +24,18 @@
 	</head>
 	<body>
         <!-- head -->
-		<g:layoutBody/>
-        <!-- footer -->
+        <section class="container">
+            <header class = "center">
+                <h1 class="title"><g:message code="default.quizoo.title"/></h1>
+                <legend><g:message code="default.quizoo.presentation"/></legend>
+            </header>
+            <g:layoutBody/>
+        </section>
+
+
+        <small>powered by frevoo<small>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/jquery.js"></script>
         <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
         <r:layoutResources />
